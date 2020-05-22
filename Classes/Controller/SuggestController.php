@@ -138,9 +138,7 @@ class SuggestController extends ActionController
                         'fuzzy' => true,
                         'size' => 10,
                         'context' => [
-                            'parentPath' => $contextNode->getPath(),
-                            'workspace' => 'live',
-                            'dimensionCombinationHash' => md5(json_encode($contextNode->getContext()->getDimensions())),
+                            'dimensionCombinationHash' => md5(json_encode($contextNode->getContext()->getDimensions()))
                         ]
                     ]
                 ]);
